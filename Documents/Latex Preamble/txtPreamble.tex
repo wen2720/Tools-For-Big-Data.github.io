@@ -1,0 +1,37 @@
+%%% article or ppt
+\documentclass{article}
+
+%%%package for file
+\usepackage{subfiles} %e.g \subfile{Abstract/text}
+
+%%%package for font
+
+%%%Package for text
+\usepackage[document]{ragged2e} %e.g \justify
+
+%%%Package for mathmetical text. 
+\usepackage{amsmath}	%for texting in math environment e.g \text
+\usepackage{amssymb}	%for math symbol e.g. \subsetneq
+
+%package for hyper-link 
+%\usepackage{hyperref}	% for \href{}{} , \url without any option will give the result with a colored frame around the link
+\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=blue,menucolor=black,runcolor=black,urlcolor=blue]{hyperref}
+
+
+%%%Macros
+
+%Substitution of dollar sign $$
+\newcommand{\dlr}[1]{$\mathit{{#1}}$}
+
+%The first paragraph of the context
+\newcommand{\para}[1]{\justify{#1}\par}
+%The sub-paragraph of the context
+\newcommand{\spara}[1]{\justify\hspace{1.5em}{#1}\par}
+
+%%%Fonts
+\DeclareMathAlphabet{\mathsfit}{T1}{\sfdefault}{\mddefault}{\sldefault}
+\SetMathAlphabet{\mathsfit}{bold}{T1}{\sfdefault}{\bfdefault}{\sldefault}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\ms}[1]{\mathsf{#1}}
+\newcommand{\mr}[1]{\mathrm{#1}}
+\newcommand{\mt}[1]{\mathit{#1}}  

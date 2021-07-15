@@ -1,0 +1,31 @@
+\section{The unix shell, git and amazon EC2}
+\para{
+The unix operating system provide some commands where the commands can be seem as quite handy tools at data operations. First we are going to have a look at some specific commands and examples of how to use the commands. Second, we will have a look at github. In general, version control system are also neccessary tool for backing up digital files to have a clear trace about the changes of the files. In the end, we will have a tour on Amazon EC2 cloud instance for cloud computing.
+}
+\subsection{Learning objectives.}
+\spara{
+\dlr{\ms{chmod}} is an abbriviation of ``change mode'' in unix shell. With appropiate inputs the command changes the mode of files. We can consider the command is function and the inputs are the arguments of the function. One of the implementation of the function is with three arguments.  the syntax of the function is as follows:
+}
+\begin{align*}
+	 \ms{chmod} [\mt{OPTION}] \ \mt{MODE[,MODE]} \ \mt{FILE}
+\end{align*}
+\para{where chmod is the function and the words in \dlr{\mt{italic}} font are non-terminals. The details of the non-terminals can be found the in the documentation regardingWe can use the function to change the permissions, for instance:
+}
+\begin{align*}
+	 \ms{chmod} \ \ms{g}\texttt{-}\ms{w} \ \ms{filename}
+\end{align*}
+
+\para{where the command removes the group members' write permission. The following table shows the specific \dlr{MODE}s are defined for the correspoding classes.}
+\begin{center}
+\begin{tabular}{c | c}
+	Class & \dlr{\ms{ls \ \texttt{-}l}} output	\\
+	\hline
+	owner & \texttt{-}rwx\texttt{------} \\
+	group & \texttt{----}rwx\texttt{---} \\
+	other & \texttt{-------}rwx
+\end{tabular}
+\end{center} 
+More details and examples can be found in \href{https://help.ubuntu.com/community/FilePermissions}{ubuntu community}.
+\spara{
+	\dlr{\ms{chmod}}
+}
