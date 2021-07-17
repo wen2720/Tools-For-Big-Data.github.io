@@ -1,21 +1,20 @@
 \section{The unix shell, git and amazon EC2}
+\vspace{2mm}
 \para{
-The unix operating system provide some commands where the commands can be seem as quite handy tools at data operations. First we are going to have a look at some specific commands and examples of how to use the commands. Second, we will have a look at github. In general, version control system are also neccessary tool for backing up digital files to have a clear trace about the changes of the files. In the end, we will have a tour on Amazon EC2 cloud instance for cloud computing.
+The Unix-like operating system provide some commands where the commands can be seem as quite handy tools at data operations. In the learning objectives, we will go through the specifica commands with the syntax. First we are going to have a look at some specific commands. Second, we will have a look at github. In general, version control system are also neccessary tool for backing up digital files to have a clear trace about the changes of the files. In the end, we will have a tour on Amazon EC2 cloud instance for cloud computing.
 }
+
 \subsection{Learning objectives.}
 \spara{
-\dlr{\ms{chmod}} is an abbriviation of ``change mode'' in unix shell. With appropiate inputs the command changes the mode of files. We can consider the command is function and the inputs are the arguments of the function. One of the implementation of the function is with three arguments.  the syntax of the function is as follows:
-}
+\href{https://www.computerhope.com/unix/uchmod.htm}{\dlr{\ms{chmod}}} is an abbriviation of ``change mode'' in unix shell. We can imagine the command is a function and the inputs are the arguments of the function. One of the implementation of the function is with three arguments.  the syntax of the function is as follows:
 \begin{align*}
 	 \ms{chmod} [\mt{OPTION}] \ \mt{MODE[,MODE]} \ \mt{FILE}
 \end{align*}
-\para{where chmod is the function and the words in \dlr{\mt{italic}} font are non-terminals. The details of the non-terminals can be found the in the documentation regardingWe can use the function to change the permissions, for instance:
-}
+where chmod is the function and the words in \dlr{\mt{italic}} font are non-terminals. We can use the function to change the permissions for a file, for instance:
 \begin{align*}
-	 \ms{chmod} \ \ms{g}\texttt{-}\ms{w} \ \ms{filename}
+	 \ms{chmod} \ \ms{g}\texttt{-}\ms{w} \ \ms{file1}
 \end{align*}
-
-\para{where the command removes the group members' write permission. The following table shows the specific \dlr{MODE}s are defined for the correspoding classes.}
+where the command removes the group members' write permission. The following table shows the specific \dlr{MODE}s are defined for the correspoding classes.
 \begin{center}
 \begin{tabular}{c | c}
 	Class & \dlr{\ms{ls \ \texttt{-}l}} output	\\
@@ -25,10 +24,26 @@ The unix operating system provide some commands where the commands can be seem a
 	other & \texttt{-------}rwx
 \end{tabular}
 \end{center} 
-More details and examples can be found in \href{https://help.ubuntu.com/community/FilePermissions}{ubuntu community}.
-\spara{
-	In the unix shell, \dlr{\ms{find}} is the command we can use for searching files and directories in the file system. The syntax is as follows:
 }
+\spara{
+\href{https://www.computerhope.com/unix/ufind.htm}{\dlr{\ms{find}}} is a superb tool which searches files and directories in the file system with good performmance. We can use The syntax is as follows:
 \begin{align*}
-	 \ms{find} [\texttt{-}\ms{H}] \ [\texttt{-}\ms{H}] \ [\texttt{-}\ms{L}] \ [\texttt{-}\ms{P}] \ [\texttt{-}\ms{D} \mt{debugopts}] [\texttt{-}\ms{O}\mt{level}] \ [\mt{path...}] [\mt{expression}]
+	 \ms{find} \ [\texttt{-}\ms{H}] \ [\texttt{-}\ms{L}] \ [\texttt{-}\ms{P}] \ [\texttt{-}\ms{D} \ \mt{debugopts}] [\texttt{-}\ms{O} \mt{level}] \ [\mt{path...}] [\mt{expression}]
 \end{align*}
+where the text inside square brackets are different kinds of options. The letters with \dlr{\ms{sans sarif}} represents the different tag for the corresponding options and the the words with italic font represent the non-terminals. 
+}
+
+\spara{
+\href{https://www.computerhope.com/unix/ugrep.htm}{\dlr{\ms{grep}}} stands for ``global regular expression print''. We can use \dlr{\ms{grep}} to process text line by line and prints out the lines that match a specified pattern. The following shows the syntax of \dlr{\ms{grep}}:
+\begin{align*}
+	\ms{grep} \ [\mt{OPTIONS}] \ PATTERN \ [FILE] 
+\end{align*}
+}
+\spara{
+\href{https://www.computerhope.com/unix/used.htm}{\dlr{\ms{sed}}} is an abbriviation of stream editor in Unix shell. We can use the command to filter and transorm texts which matches specified pattern.  The syntax of sed is shown as follows:
+\begin{align*}
+	\ms{sed} \ \mt{OPTIONS } \ [\mt{SCRIPT}] \ [\mt{FILE}]
+\end{align*}
+}
+
+
