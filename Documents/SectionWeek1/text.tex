@@ -1,12 +1,12 @@
 \section{The unix shell, git and amazon EC2}
 \vspace{2mm}
 \para{
-The Unix-like operating system provide some commands where the commands can be seem as quite handy tools at data operations. In the learning objectives, we will go through the specifica commands with the syntax. First we are going to have a look at some specific commands. Second, we will have a look at github. In general, version control system are also neccessary tool for backing up digital files to have a clear trace about the changes of the files. In the end, we will have a tour on Amazon EC2 cloud instance for cloud computing.
+The Unix-like operating system provide some commands are quite handy tools at data operations. In the learning objectives, we will go through the specifica commands with the syntax. First we are going to have a look at some specific commands. Second, we will have a look at github. In general, version control system are also neccessary tool for backing up digital files to have a clear trace about the changes of the files. In the end, we will have a tour on Amazon EC2 cloud instance for cloud computing.
 }
 
 \subsection{Learning objectives.}
-\spara{
-\href{https://www.computerhope.com/unix/uchmod.htm}{\dlr{\ms{chmod}}} is an abbriviation of ``change mode'' in unix shell. We can imagine the command is a function and the inputs are the arguments of the function. One of the implementation of the function is with three arguments.  the syntax of the function is as follows:
+\para{
+\href{https://www.computerhope.com/unix/uchmod.htm}{\dlr{\ms{chmod}}} is the abbriviation of ``change mode'' in unix shell. We can imagine the command is a function and the inputs are the arguments of the function. One of the implementation of the function is with three arguments.  the syntax of the function is as follows:
 \begin{align*}
 	 \ms{chmod} [\mt{OPTION}] \ \mt{MODE[,MODE]} \ \mt{FILE}
 \end{align*}
@@ -25,7 +25,8 @@ where the command removes the group members' write permission. The following tab
 \end{tabular}
 \end{center} 
 }
-\spara{
+
+\para{
 \href{https://www.computerhope.com/unix/ufind.htm}{\dlr{\ms{find}}} is a superb tool which searches files and directories in the file system with good performmance. We can use The syntax is as follows:
 \begin{align*}
 	 \ms{find} \ [\texttt{-}\ms{H}] \ [\texttt{-}\ms{L}] \ [\texttt{-}\ms{P}] \ [\texttt{-}\ms{D} \ \mt{debugopts}] [\texttt{-}\ms{O} \mt{level}] \ [\mt{path...}] [\mt{expression}]
@@ -33,17 +34,118 @@ where the command removes the group members' write permission. The following tab
 where the text inside square brackets are different kinds of options. The letters with \dlr{\ms{sans sarif}} represents the different tag for the corresponding options and the the words with italic font represent the non-terminals. 
 }
 
-\spara{
+\para{
 \href{https://www.computerhope.com/unix/ugrep.htm}{\dlr{\ms{grep}}} stands for ``global regular expression print''. We can use \dlr{\ms{grep}} to process text line by line and prints out the lines that match a specified pattern. The following shows the syntax of \dlr{\ms{grep}}:
 \begin{align*}
-	\ms{grep} \ [\mt{OPTIONS}] \ PATTERN \ [FILE] 
+	\ms{grep} \ [\mt{OPTIONS}] \ PATTERN \ \mt{FILE}
 \end{align*}
 }
-\spara{
-\href{https://www.computerhope.com/unix/used.htm}{\dlr{\ms{sed}}} is an abbriviation of stream editor in Unix shell. We can use the command to filter and transorm texts which matches specified pattern.  The syntax of sed is shown as follows:
+
+\para{
+\href{https://www.computerhope.com/unix/used.htm}{\dlr{\ms{sed}}} is the abbriviation of stream editor in Unix shell. We can use the command to filter and transorm texts which matches specified pattern.  The syntax of sed is shown as follows:
 \begin{align*}
-	\ms{sed} \ \mt{OPTIONS } \ [\mt{SCRIPT}] \ [\mt{FILE}]
+	\ms{sed} \ \mt{OPTIONS } \ [\mt{SCRIPT}] \ \mt{FILE}
 \end{align*}
 }
 
+\para{
+\href{https://www.computerhope.com/unix/apt-get.htm}{\dlr{\ms{apt\texttt{-}get}}} is a command from the APT package where APT is the abbrivation of advanced packaging tool.
+}
 
+\para{
+\href{https://www.computerhope.com/unix/upico.htm}{\dlr{\ms{nano}}} is a terminal based text editor for Linux.
+The syntax is as follows: 
+\begin{align*}
+	\ms{nano} \ [\mt{OPTIONS }] \ \mt{FILE}
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/ucut.htm}{\dlr{\ms{cut}}} is a command that we can use it for cutting out as our specification.
+\begin{align*}
+	\ms{cut} \ \mt{OPTIONS} \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/ucut.htm}{\dlr{\ms{sort}}} is a command which we can use it for sorting the text line by line of a file.
+\begin{align*}
+	\ms{sort} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/ucut.htm}{\dlr{\ms{uniq}}} is a command which we can use it for filtering out the repreated items.
+\begin{align*}
+	\ms{uniq} \ [\mt{OPTIONS}] \ \mt{INPUT [OUTPUT]}
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/ucut.htm}{\dlr{\ms{head}}} is a command which we can use it for outputting the head portion of the input file.
+\begin{align*}
+	\ms{head} \ \mt{OPTIONS} \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/ucut.htm}{\dlr{\ms{tail}}} is a command which we can use it for outputting the tail portion of the input file.
+\begin{align*}
+	\ms{tail} \ \mt{OPTIONS} \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/uless.htm}{\dlr{\ms{less}}} is a command line file viewer.
+\begin{align*}
+	\ms{less} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/ucat.htm}{\dlr{\ms{cat}}} is an abbrivation of concaternation which describes combinging string without any gaps. We can use the command to display and output the contenst of a file. The syntax is as follows:
+\begin{align*}
+	\ms{cat} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/jargon/s/ssh.htm}{\dlr{\ms{cat}}} is an abbrivation of secure shell which establishes secure protocol. We can use the command for remote logins.  
+\begin{align*}
+	\ms{ssh} \ [\mt{OPTIONS}] \ \mt{HOSTNAME}
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/uwc.htm}{\dlr{\ms{wc}}} counts the words, newlines or bytes of input \dlr{\mt{FILE}}.  
+\begin{align*}
+	\ms{wc} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/uecho.htm}{\dlr{\ms{echo}}} is a command prints text to standard output.
+\begin{align*}
+	\ms{echo} \ [\mt{OPTIONS}] \ [\mt{STRING}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/uman.htm}{\dlr{\ms{echo}}} is a command which we can use it for observing the reference manuals. 
+\begin{align*}
+	\ms{man} \ [\mt{OPTIONS}] \ [\mt{COMMAND}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/uawk.htm}{\dlr{\ms{awk}}} is an abbrivation with initials of Aho, Weinberger, and Kernighan' who developed the domain-specific language. In Unix-like operating system, \dlr{\ms{awk}} is gennerally symbolic link to the executable file \dlr{\ms{/usr/bin/gawk}}. We can use the command for processing text and extract the data. 
+\begin{align*}
+	\ms{awk} \ [\texttt{-F} \ \mt{fs}] \ [\texttt{-}\ms{v \ var}=\mt{value}] \ [ \text{`}\mt{prog}\text{' }  |  \texttt{ -f} \ \mt{progfile}] \ [\mt{file}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/uvi.htm}{\dlr{\ms{awk}}} is an abbrivation with initials of Aho, Weinberger, and Kernighan' who developed the domain-specific language. In Unix-like operating system, \dlr{\ms{awk}} is gennerally symbolic link to the executable file \dlr{\ms{/usr/bin/gawk}}. We can use the command for processing text and extract the data. 
+\begin{align*}
+	\ms{awk} \ [\texttt{-F} \ \mt{fs}] \ [\texttt{-}\ms{v \ var}=\mt{value}] \ [ \text{`}\mt{prog}\text{' }  |  \texttt{ -f} \ \mt{progfile}] \ [\mt{file}]
+\end{align*}
