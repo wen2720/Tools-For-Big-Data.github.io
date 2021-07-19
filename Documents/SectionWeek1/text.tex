@@ -1,10 +1,11 @@
-\section{The unix shell, git and amazon EC2}
+\section{Learning objectives}
 \vspace{2mm}
+
 \para{
-The Unix-like operating system provide some commands are quite handy tools at data operations. In the learning objectives, we will go through the specifica commands with the syntax. First we are going to have a look at some specific commands. Second, we will have a look at github. In general, version control system are also neccessary tool for backing up digital files to have a clear trace about the changes of the files. In the end, we will have a tour on Amazon EC2 cloud instance for cloud computing.
+The Unix-like operating system provide some commands are quite handy tools at data operations. In the learning objectives, we will go through the specifica commands with the syntax. First we are going to have a look at some specific Unix or Unix-like commands. Second, we will have a look at github. In the end, we will have a tour on Amazon EC2 cloud instance for cloud computing.
 }
 
-\subsection{Learning objectives.}
+\subsection{Unix shell or Unix-like shell}
 \para{
 \href{https://www.computerhope.com/unix/uchmod.htm}{\dlr{\ms{chmod}}} is the abbriviation of ``change mode'' in unix shell. We can imagine the command is a function and the inputs are the arguments of the function. One of the implementation of the function is with three arguments.  the syntax of the function is as follows:
 \begin{align*}
@@ -138,14 +139,108 @@ The syntax is as follows:
 }
 
 \para{
-\href{https://www.computerhope.com/unix/uawk.htm}{\dlr{\ms{awk}}} is an abbrivation with initials of Aho, Weinberger, and Kernighan' who developed the domain-specific language. In Unix-like operating system, \dlr{\ms{awk}} is gennerally symbolic link to the executable file \dlr{\ms{/usr/bin/gawk}}. We can use the command for processing text and extract the data. 
+\href{https://www.computerhope.com/unix/uawk.htm}{\dlr{\ms{awk}}} is an abbrivation with initials of Aho, Weinberger, and Kernighan' who developed the domain-specific language. In Unix-like operating system, \dlr{\ms{awk}} is gennerally symbolic link to the executable file \dlr{\ms{/usr/bin/gawk}}. We can use the command for processing text and extract the data. The syntax of the awk is as follows:
 \begin{align*}
-	\ms{awk} \ [\texttt{-F} \ \mt{fs}] \ [\texttt{-}\ms{v \ var}=\mt{value}] \ [ \text{`}\mt{prog}\text{' }  |  \texttt{ -f} \ \mt{progfile}] \ [\mt{file}]
+	\ms{awk} \ [\mt{OPTIONS}] [\mt{FILE}]
 \end{align*}
 }
 
 \para{
-\href{https://www.computerhope.com/unix/uvi.htm}{\dlr{\ms{awk}}} is an abbrivation with initials of Aho, Weinberger, and Kernighan' who developed the domain-specific language. In Unix-like operating system, \dlr{\ms{awk}} is gennerally symbolic link to the executable file \dlr{\ms{/usr/bin/gawk}}. We can use the command for processing text and extract the data. 
+\href{https://www.computerhope.com/unix/uvi.htm}{\dlr{\ms{vi}}} is a text editor.  The syntax is as follows:
 \begin{align*}
-	\ms{awk} \ [\texttt{-F} \ \mt{fs}] \ [\texttt{-}\ms{v \ var}=\mt{value}] \ [ \text{`}\mt{prog}\text{' }  |  \texttt{ -f} \ \mt{progfile}] \ [\mt{file}]
+	\ms{VI} \ [\mt{OPTIONS}] \ [\mt{FILE}]
 \end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/uvi.htm}{\dlr{\ms{vi}}} is a comprehensive comtomizable text editor.  The syntax is as follows:
+\begin{align*}
+	\ms{emaxs} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\subsection{Git and Github}
+\para{
+In general, version control system are also neccessary tool for backing up digital files to have a clear trace about the changes of the files. First of all, we need to create a new repository on the github wesite by using personal account. Then we can use CLI(Command Line Interface) for version control. 
+}
+
+\para{
+\href{https://git-scm.com/docs/git-config}{\dlr{\ms{git \ config}}} is a command for getting and setting a repository or global options. We normally configure email and identifier with the command for others to contact and identifiying who made the git commit, for instance:
+\begin{align*}
+	\ms{git \ config} \ \ms{user.name} \ \text{``}\mt{IDENTIFIER}\text{''}
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-init}{\dlr{\ms{git \ init}}} creates an empty git repository or reinitialize an existing one. i.e.,we can use the command to create a new local file directory a local or turn a existing local file directorry to a git repository. And we would eventually push it to the  push to a git repository branch. The syntax is as follows:
+\begin{align*}
+	\ms{git \ init} \ [\mt{OPTIONS}] \ [\mt{DIRECTORY}]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-clone}{\dlr{\ms{git \ clone}}} clones a git repository into a directory. i.e., We can use the command to copy the git repository to local fire directory. In general, the command requires the correctly formed URL. The syntax is as follows:
+\begin{align*}
+	\ms{git \ clone} \ [\mt{OPTIONS}] \ [\mt{URL}]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-add}{\dlr{\ms{git \ add}}} adds changes to the index. i.e., we can use the command to updates the changes to the current content found in the local directory to prepare the next commit.
+\begin{align*}
+	\ms{git \ add} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-rm}{\dlr{\ms{git \ rm}}} removes filres from the working tree and from the index. The syntax is as follows:
+\begin{align*}
+	\ms{git \ rm} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-commit}{\dlr{\ms{git \ commit}}} record changes to the repository. i.e. we can use the command to cirmfirm the changes to the repository and also leave a description to the changes that we made to it. The syntax is shown as follows:
+\begin{align*}
+	\ms{git \ commit} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-status}{\dlr{\ms{git \ status}}} shows the working tree status. i.e. we can check the changes that we have made in local git repository. The syntax is shown as follows:
+\begin{align*}
+	\ms{git \ status} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-checkout}{\dlr{\ms{git \ checkout}}} switch branches or restore working trees.
+\begin{align*}
+	\ms{git \ checkout} \ [\mt{OPTIONS}] \ [\mt{BRANCH}]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-stash}{\dlr{\ms{git \ stash}}} stash the changes in a dirty working directory away. i.e., we can use the command for retriving a working tree before any changes have been made to it while save the changes for later use.
+\begin{align*}
+	\ms{git \ stash} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-pull}{\dlr{\ms{git \ pull}}} fetches and integrate with another repository or a local branch. i.e. we can use the command to update the branches for the repository then merge them into current branch. The syntax is as follows:
+\begin{align*}
+	\ms{git \ pull} \ [\mt{OPTIONS}] \ [\mt{REPOSITORY \ [REFSPEC}]]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-push}{\dlr{\ms{git \ push}}} updates remote refs along with associated objects. i.e., we can use the command to update remote repository with local repository. The syntax is as follows:
+\begin{align*}
+	\ms{git \ push} \ [\mt{OPTIONS}]
+\end{align*}
+}
+
+\para{
+First of all, we need to be registered as a user of github in order to create a new remote repository in the github site. Then we can either initialize a local repository or just clone the remote repository. Typically, we should work in a specifica branch then merge the changes to the master if the changes are valid. Then we can follow the syntax of git push and pull to form a correct command.
+}
