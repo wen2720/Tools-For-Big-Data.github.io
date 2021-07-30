@@ -1,0 +1,6 @@
+#!/bin/sh
+rm wordFreq.output
+touch wordFreq.output
+#(tr ' ' '\n' | sort | uniq -c) < $1 # translate white space to newline to split each word then piped to be sorted then get uniq lines with counted occurences.
+
+(tr ' ' '\n' | sort | uniq -c | awk '{print $2, $1 }') < $1
