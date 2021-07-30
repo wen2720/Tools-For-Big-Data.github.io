@@ -1,0 +1,247 @@
+\section{Learning objectives}
+\vspace{2mm}
+
+\para{
+The Unix-like operating system provide some commands are quite handy tools at data operations. In the learning objectives, we will go through the specifica commands with the syntax. First we are going to have a look at some specific Unix or Unix-like commands. Second, we will have a look at github. In the end, we will have a tour on Amazon EC2 cloud instance for cloud computing.
+}
+
+\subsection{Unix shell or Unix-like shell}
+\para{
+\href{https://www.computerhope.com/unix/uchmod.htm}{\dlr{\ms{chmod}}} is the abbriviation of ``change mode'' in unix shell. We can imagine the command is a function and the inputs are the arguments of the function. One of the implementation of the function is with three arguments.  the syntax of the function is as follows:
+\begin{align*}
+	 \ms{chmod} [\mt{OPTION}] \ \mt{MODE[,MODE]} \ \mt{FILE}
+\end{align*}
+where chmod is the function and the words in \dlr{\mt{italic}} font are non-terminals. We can use the function to change the permissions for a file, for instance:
+\begin{align*}
+	 \ms{chmod} \ \ms{g}\texttt{-}\ms{w} \ \ms{file1}
+\end{align*}
+where the command removes the group members' write permission. The following table shows the specific \dlr{MODE}s are defined for the correspoding classes.
+\begin{center}
+\begin{tabular}{c | c}
+	Class & \dlr{\ms{ls \ \texttt{-}l}} output	\\
+	\hline
+	owner & \texttt{-}rwx\texttt{------} \\
+	group & \texttt{----}rwx\texttt{---} \\
+	other & \texttt{-------}rwx
+\end{tabular}
+\end{center} 
+}
+
+\para{
+\href{https://www.computerhope.com/unix/ufind.htm}{\dlr{\ms{find}}} is a superb tool which searches files and directories in the file system with good performmance. We can use The syntax is as follows:
+\begin{align*}
+	 \ms{find} \ [\texttt{-}\ms{H}] \ [\texttt{-}\ms{L}] \ [\texttt{-}\ms{P}] \ [\texttt{-}\ms{D} \ \mt{debugopts}] [\texttt{-}\ms{O} \mt{level}] \ [\mt{path...}] [\mt{expression}]
+\end{align*}
+where the text inside square brackets are different kinds of options. The letters with \dlr{\ms{sans sarif}} represents the different tag for the corresponding options and the the words with italic font represent the non-terminals. 
+}
+
+\para{
+\href{https://www.computerhope.com/unix/ugrep.htm}{\dlr{\ms{grep}}} stands for ``global regular expression print''. We can use \dlr{\ms{grep}} to process text line by line and prints out the lines that match a specified pattern. The following shows the syntax of \dlr{\ms{grep}}:
+\begin{align*}
+	\ms{grep} \ [\mt{OPTIONS}] \ PATTERN \ \mt{FILE}
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/used.htm}{\dlr{\ms{sed}}} is the abbriviation of stream editor in Unix shell. We can use the command to filter and transorm texts which matches specified pattern.  The syntax of sed is shown as follows:
+\begin{align*}
+	\ms{sed} \ \mt{OPTIONS } \ [\mt{SCRIPT}] \ \mt{FILE}
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/apt-get.htm}{\dlr{\ms{apt\texttt{-}get}}} is a command from the APT package where APT is the abbrivation of advanced packaging tool.
+}
+
+\para{
+\href{https://www.computerhope.com/unix/upico.htm}{\dlr{\ms{nano}}} is a terminal based text editor for Linux.
+The syntax is as follows: 
+\begin{align*}
+	\ms{nano} \ [\mt{OPTIONS }] \ \mt{FILE}
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/ucut.htm}{\dlr{\ms{cut}}} is a command that we can use it for cutting out as our specification.
+\begin{align*}
+	\ms{cut} \ \mt{OPTIONS} \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/ucut.htm}{\dlr{\ms{sort}}} is a command which we can use it for sorting the text line by line of a file.
+\begin{align*}
+	\ms{sort} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/ucut.htm}{\dlr{\ms{uniq}}} is a command which we can use it for filtering out the repreated items.
+\begin{align*}
+	\ms{uniq} \ [\mt{OPTIONS}] \ \mt{INPUT \ [OUTPUT]}
+\end{align*} 
+One of the useage is to enable the \dlr{\ms{\texttt{-}c}} option to count how many times for each line is repeated from a input.
+}
+
+\para{
+\href{https://www.computerhope.com/unix/ucut.htm}{\dlr{\ms{head}}} is a command which we can use it for outputting the head portion of the input file.
+\begin{align*}
+	\ms{head} \ \mt{OPTIONS} \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/ucut.htm}{\dlr{\ms{tail}}} is a command which we can use it for outputting the tail portion of the input file.
+\begin{align*}
+	\ms{tail} \ \mt{OPTIONS} \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/uless.htm}{\dlr{\ms{less}}} is a command line file viewer.
+\begin{align*}
+	\ms{less} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/ucat.htm}{\dlr{\ms{cat}}} is an abbrivation of concaternation which describes combinging string without any gaps. We can use the command to display and output the contenst of a file. The syntax is as follows:
+\begin{align*}
+	\ms{cat} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/jargon/s/ssh.htm}{\dlr{\ms{ssh}}} is an abbrivation of secure shell which establishes secure protocol. We can use the command for remote logins.  
+\begin{align*}
+	\ms{ssh} \ [\mt{OPTIONS}] \ \mt{HOSTNAME}
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/uwc.htm}{\dlr{\ms{wc}}} counts the words, newlines or bytes of input \dlr{\mt{FILE}}.  
+\begin{align*}
+	\ms{wc} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/uecho.htm}{\dlr{\ms{echo}}} is a command prints text to standard output.
+\begin{align*}
+	\ms{echo} \ [\mt{OPTIONS}] \ [\mt{STRING}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/uman.htm}{\dlr{\ms{echo}}} is a command which we can use it for observing the reference manuals. 
+\begin{align*}
+	\ms{man} \ [\mt{OPTIONS}] \ [\mt{COMMAND}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/uawk.htm}{\dlr{\ms{awk}}} is an abbrivation with initials of Aho, Weinberger, and Kernighan' who developed the domain-specific language. In Unix-like operating system, \dlr{\ms{awk}} is gennerally symbolic link to the executable file \dlr{\ms{/usr/bin/gawk}}. We can use the command for processing text and extract the data. The syntax of the awk is as follows:
+\begin{align*}
+	\ms{awk} \ \mt{'PROGRAM'} \ \mt{FILE}
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/uvi.htm}{\dlr{\ms{vi}}} is a text editor.  The syntax is as follows:
+\begin{align*}
+	\ms{VI} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://www.computerhope.com/unix/uemacs.htm}{\dlr{\ms{emacs}}} is a comprehensive comtomizable text editor.  The syntax is as follows:
+\begin{align*}
+	\ms{emaxs} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\subsection{Git and Github}
+\para{
+In general, version control system are also neccessary tool for backing up digital files to have a clear trace about the changes of the files. First of all, we need to create a new repository on the github wesite by using personal account. Then we can use CLI(Command Line Interface) for version control. 
+}
+
+\para{
+\href{https://git-scm.com/docs/git-config}{\dlr{\ms{git \ config}}} is a command for getting and setting a repository or global options. We normally configure email and identifier with the command for others to contact and identifiying who made the git commit, for instance:
+\begin{align*}
+	\ms{git \ config} \ \ms{user.name} \ \text{``}\mt{IDENTIFIER}\text{''}
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-init}{\dlr{\ms{git \ init}}} creates an empty git repository or reinitialize an existing one. i.e.,we can use the command to create a new local file directory a local or turn a existing local file directorry to a git repository. And we would eventually push it to the  push to a git repository branch. The syntax is as follows:
+\begin{align*}
+	\ms{git \ init} \ [\mt{OPTIONS}] \ [\mt{DIRECTORY}]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-clone}{\dlr{\ms{git \ clone}}} clones a git repository into a directory. i.e., We can use the command to copy the git repository to local fire directory. In general, the command requires the correctly formed URL. The syntax is as follows:
+\begin{align*}
+	\ms{git \ clone} \ [\mt{OPTIONS}] \ [\mt{URL}]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-add}{\dlr{\ms{git \ add}}} adds changes to the index. i.e., we can use the command to updates the changes to the current content found in the local directory to prepare the next commit.
+\begin{align*}
+	\ms{git \ add} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-rm}{\dlr{\ms{git \ rm}}} removes filres from the working tree and from the index. The syntax is as follows:
+\begin{align*}
+	\ms{git \ rm} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-commit}{\dlr{\ms{git \ commit}}} record changes to the repository. i.e. we can use the command to cirmfirm the changes to the repository and also leave a description to the changes that we made to it. The syntax is shown as follows:
+\begin{align*}
+	\ms{git \ commit} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-status}{\dlr{\ms{git \ status}}} shows the working tree status. i.e. we can check the changes that we have made in local git repository. The syntax is shown as follows:
+\begin{align*}
+	\ms{git \ status} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-checkout}{\dlr{\ms{git \ checkout}}} switch branches or restore working trees.
+\begin{align*}
+	\ms{git \ checkout} \ [\mt{OPTIONS}] \ [\mt{BRANCH}]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-stash}{\dlr{\ms{git \ stash}}} stash the changes in a dirty working directory away. i.e., we can use the command for retriving a working tree before any changes have been made to it while save the changes for later use.
+\begin{align*}
+	\ms{git \ stash} \ [\mt{OPTIONS}] \ [\mt{FILE}]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-pull}{\dlr{\ms{git \ pull}}} fetches and integrate with another repository or a local branch. i.e. we can use the command to update the branches for the repository then merge them into current branch. The syntax is as follows:
+\begin{align*}
+	\ms{git \ pull} \ [\mt{OPTIONS}] \ [\mt{REPOSITORY \ [REFSPEC}]]
+\end{align*}
+}
+
+\para{
+\href{https://git-scm.com/docs/git-push}{\dlr{\ms{git \ push}}} updates remote refs along with associated objects. i.e., we can use the command to update remote repository with local repository. The syntax is as follows:
+\begin{align*}
+	\ms{git \ push} \ [\mt{OPTIONS}]
+\end{align*}
+}
+
+\para{
+First of all, we need to be registered as a user of github in order to create a new remote repository in the github site. Then we can either initialize a local repository or just clone the remote repository. Typically, we should work in a specifica branch then merge the changes to the master if the changes are valid. Then we can follow the syntax of git push and pull to form a correct command.
+}
