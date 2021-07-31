@@ -1,4 +1,6 @@
 #!/bin/sh
+#rm FILENAME #remove file 
+#touch FILENAME # create a file
 #awk 'PROGRAM' FILENAME
 #awk '{ print $1, $2 + 1 }' awkExp.output > awkExp.newoutput #just increase filed 2 by 1 for each line 	
 #awk '{if ($1 == "the") print NR;}' $1 #print the line number which the field matches the
