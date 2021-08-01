@@ -1,0 +1,3 @@
+#!/bin/sh
+tr -cs "[:alpha:]" '\n' < $1
+
