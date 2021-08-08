@@ -5,3 +5,8 @@ Create a few files locally on your computer. Create a new repository on Github a
 
 ==================================================================
 The edition from here are made from the AWS instance. Which would be commit and push to a branch of remote repo. https://github.com/wen0727/Tools-For-Big-Data.github.io.git
+
+The gneral idea is to use the Fork repository. If we work as an outsourced contributor then we do not have the privillege to make modification on the original repository. What we would do for making proposition with github oull request or similar in other service?
+
+Fork the repostiory and conle to loacal machine. We also need to add remote repository of both the original as a UPSTREAM and the ORIGIN. So when the check the log of commitment with git-log they can see the pointers of the UPSTREAM AND ORIGIN.
+
