@@ -30,16 +30,19 @@
 
 ##Read stdin file use STR.split() split string by whitespace and each splitted string is popped into the list. Then the list will be appended to the BOX.
 import os
-PATH = os.path.join(os.path.expanduser('~'),"Tools-For-Big-Data.github.io","ex2-1")
+DATAFILE="R9FVAdXW.txt"
+CWD=os.getcwd()
+OUTPUTFILE="NEW"+DATAFILE
+
 def ioListOfList(P):
     BOX=[]
-    with open(P,'r') as F:
+    with open(os.path.join(P,DATAFILE),'r') as F:
         print "Each STR.split are shown as follows:"
         for LINE in F:
             ITEM=LINE.split()
             BOX.append(ITEM)
             print ITEM
-            with open(path+"/themeta.txt",'w') as NF:
+            with open(os.path.join(P,"themeta.txt"),'w') as NF:
                 NF.writelines(ITEM)
         NF.close()
         F.close()
@@ -47,11 +50,10 @@ def ioListOfList(P):
         print BOX
         print "And the file is save to themeta.txt."
     return BOX
-FN="/R9FVAdXW.txt"
-ARG1=ioListOfList(PATH+FN)
+ARG1=ioListOfList(CWD)
 def ioMatrix(L,P):
     BOX=[]
-    with open(P,'w') as F:
+    with open(os.path.join(P,OUTPUTFILE),'w') as F:
         for L1 in L:
             for L2 in L1:
                 F.write(L2+' ')
@@ -59,5 +61,5 @@ def ioMatrix(L,P):
     F.close()
     print "The matrix is in the new file."
     os.system("cat "+P)
-ioMatrix(ARG1,PATH+"/NewR9FVAdXW.txt")
-    
+ioMatrix(ARG1,CWD)
+   
