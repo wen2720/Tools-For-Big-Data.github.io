@@ -58,3 +58,11 @@ def binRepI():
     print BOX
     return BOX 
 binRepI()
+# The expression in the while loop meaning:
+# i.e. BIT=3
+# for unsinged two's complement of 3 bit
+# all number with in the range of 2^3 can be represented with B2*2^2 + B1*2^1 + B0*2^0 
+# for Ni - 2^i-1 may have three condition 
+#   1. Ni - 2^i-1 = 0           if Ni=2^i-1 then Bi=1 and Ni'=0
+#                 = negative    if Ni<2^i-1 then Bi=0 and Ni' stay the same
+#                 = postive     if Ni>2^i-1 then Bi=1 and Ni'=Ni -2^i-1 

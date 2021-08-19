@@ -1,2 +1,0 @@
-#!/bin/sh
-tr -cs "[:alpha:]" "\n" < $1 > "trExp.output"

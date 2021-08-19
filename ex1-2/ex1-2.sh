@@ -1,0 +1,7 @@
+#!/bin/sh
+#Exercise 1.2:
+
+#Put this data (https://www.dropbox.com/s/d5c4x905w4jelbu/cars.txt?dl=0) into a file and write a command that removes all rows where the price is more than 10,000$.
+#Idea 1
+#The idea to fiter out the lines which the price fields are less than 10000 by using awk 'PATTERN {ACTION}'
+awk '$5 <= 10000 ' $1

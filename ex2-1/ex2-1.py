@@ -30,6 +30,7 @@
 
 ##Read stdin file use STR.split() split string by whitespace and each splitted string is popped into the list. Then the list will be appended to the BOX.
 import os
+import time
 DATAFILE="R9FVAdXW.txt"
 CWD=os.getcwd()
 OUTPUTFILE="NEW"+DATAFILE
@@ -42,13 +43,14 @@ def ioListOfList(P):
             ITEM=LINE.split()
             BOX.append(ITEM)
             print ITEM
-            with open(os.path.join(P,"themeta.txt"),'w') as NF:
+            #the following is not correct, because ITEM is list and writelines only work for iterable string. there for they are written in one line.
+            with open(os.path.join(P,"listOflist.txt"),'a') as NF:
                 NF.writelines(ITEM)
         NF.close()
         F.close()
         print "The list of list is shown as follows:"
         print BOX
-        print "And the file is save to themeta.txt."
+        print "And the file is save to listOflist.txt."
     return BOX
 ARG1=ioListOfList(CWD)
 def ioMatrix(L,P):
@@ -60,6 +62,6 @@ def ioMatrix(L,P):
             F.write('\n')   
     F.close()
     print "The matrix is in the new file."
-    os.system("cat "+P)
+    os.system("cat "+P+"/"+OUTPUTFILE)
 ioMatrix(ARG1,CWD)
    
