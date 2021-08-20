@@ -1,6 +1,4 @@
 #!/bin/sh
-#Exercise 1.1:
-#Write a command that finds the 10 most popular words in a file.
 
 #Idea:
 #The idea is to translate each alphabetic characters which forms the words with -c option and compress identical newline character with second argument with -s option.   

@@ -25,7 +25,10 @@ P.S.
 	print "%s seconds" % time.time()-M1 
 
 * How to use the files?
-	python ex2-1.py R9VAdXW.txt
+	python ex2-1.py
 * What are these files?
-ex2-1.py contains the exercise content and solution. By compiling the source file and the stdi file, a two new stdo file will be created. The remaining file is just an example of using a python package and its built in function.
+ex2-1.py contains the exercise content and solution. By compiling the source file, a new stdo file will be created. The remaining file is just an example of using a python package and its built in function.
 
+
+* Exercise 2.1:
+Write a script with two methods. The first method should read in a matrix like the one here and return a list of lists. The second method should do the inverse, namely take, as input, a list of lists and save it in a file with same format as the initial file. The first method should take the file name as a parameter. The second method should take two arguments, the list of lists, and a filename of where to save the output.

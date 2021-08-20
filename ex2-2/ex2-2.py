@@ -1,6 +1,7 @@
 #!/bin/bash
-#Exercise 2.2:
-#Write a script that takes an integer N, and outputs all bit-strings of length N as lists. For example: 3 -> [0,0,0], [0,0,1],[0,1,0],[0,1,1],[1,0,0],[1,0,1],[1,1,0],[1,1,1]. As a sanity check, remember that there are 2^N such lists.
+
+###(We have to pay attention that built-in function for converting integer to binary is not allowed, there for we should use 2's complement algorithm to make the calculation.) 
+### The function can definitely be optimized, due to the fact that while loop uses more assembly than for loop, there for it could be improve by using for loop.
 def binRep3():
     BOX=[]
     BIT=3

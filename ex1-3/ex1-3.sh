@@ -1,6 +1,4 @@
 #!/bin/sh
-###Exercise 1.3:
-#Using this file (https://www.dropbox.com/s/tjv9pyfrd9ztx8r/dict?dl=0) as a dictionary, write a simple spellchecker that takes input from stdin or a file and outputs a list of words not in the dictionary. One solution gets 721 misspelled words in this Shakespeare file (https://www.dropbox.com/s/bnku7grfycm8ii6/shakespeare.txt?dl=0).
 
 ### This shell script 
 ### 1. The exercise is to find wrong engish spells from stdin shakespeare.txt file regarding to a given dictionary stdin dict file. Recall the following command choosing the option -c for translating the each pattern matches the regexes and -s which replace multiple occurrences of '\n' to a single one. Please ignore the example, to bash the script require following syntax:
