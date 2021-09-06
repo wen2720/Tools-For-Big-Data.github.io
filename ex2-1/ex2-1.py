@@ -1,6 +1,4 @@
-#!/bin/bash
 #Exercise 2.1:
-#Write a script with two methods. The first method should read in a matrix like the one here and return a list of lists. The second method should do the inverse, namely take, as input, a list of lists and save it in a file with same format as the initial file. The first method should take the file name as a parameter. The second method should take two arguments, the list of lists, and a filename of where to save the output.
 
 ### Example, convertions from stdi to file object 
 #import os
@@ -70,9 +68,9 @@ def fileToList(F) :
         for LINE in FO:
         #file object does not support indexing in for loop.
         #for I in range(len(FO)) :
-            LIST_LIST.append(stringOp(LINE))
+            #LIST_LIST.append(stringOp(LINE))
             #MY DIY stringOperation is tiny slower than STR.split(), linke 1*10^-5 sec slower. Maybe because of the if statements, the logic is not concise enough. But for small amount of data built-in may faster; and for large one's it could be slower. As in ex2-3, both Regex and STR.split() is slower than the DIY stirng operation.
-            #LIST_LIST.append(LINE.split())
+            LIST_LIST.append(LINE.split())
     FO.close()
     return LIST_LIST
 print fileToList(DATAFILE)

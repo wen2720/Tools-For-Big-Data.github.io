@@ -1,5 +1,3 @@
-#!/bin/bash
-
 ### packages
 import re
 import json
@@ -426,7 +424,7 @@ print "Time consumed at the task %s sec." % timeFn(listToFile,ARG1,'pizza.output
 
 
 ### Test string operation version 2.
-### Result: a bit slower thant version 1 due to repeated control flow.
+### Result: a bit slower than version 1 due to repeated control flow.
 #def stringOpv2() :
 #    BAG=[]
 #    WORD=""

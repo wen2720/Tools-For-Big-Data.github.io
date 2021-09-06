@@ -1,5 +1,3 @@
-#!/bin/bash
-
 ###(We have to pay attention that built-in function for converting integer to binary is not allowed, there for we should use 2's complement algorithm to make the calculation.) 
 ### The function can definitely be optimized, due to the fact that while loop uses more assembly than for loop, there for it could be improve by using for loop.
 def binRep3():
